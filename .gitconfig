@@ -1,0 +1,42 @@
+[user]
+	email = harshvardhan.suresh@solitontech.com
+	name = harsha
+
+[credential]
+	helper = cache --timeout=3600
+
+[core]
+	autocrlf = input
+	safecrlf = true
+
+[alias]
+  co = checkout
+  ci = commit
+  st = status
+  br = branch
+  lg = log --graph --abbrev-commit --decorate --date=relative --format=format:'%C(bold blue)%h%C(reset) - %C(blue)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim green)- %an%C(reset)%C(bold red)%d%C(reset)' --all
+  lg2 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(blue)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold red)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim black)- %an%C(reset)' --all
+  hist = log --color --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+  type = cat-file -t
+  dump = cat-file -p
+
+[color]
+  branch = auto
+  diff = auto
+  status = auto
+
+[color "branch"]
+  current = red
+  local = blue
+  remote = green
+
+[color "diff"]
+  meta = blue bold
+  frag = magenta bold
+  old = red
+  new = cyan
+
+[color "status"]
+  added = green
+  changed = blue
+  untracked = red
